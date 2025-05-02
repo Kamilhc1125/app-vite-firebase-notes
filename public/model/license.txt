@@ -1,0 +1,11 @@
+Model Information:
+* title:	Google Logo
+* source:	https://sketchfab.com/3d-models/google-logo-7e904bea654b40d7861c84a7cb5cc969
+* author:	Anthony Yanez (https://sketchfab.com/paulyanez)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Google Logo" (https://sketchfab.com/3d-models/google-logo-7e904bea654b40d7861c84a7cb5cc969) by Anthony Yanez (https://sketchfab.com/paulyanez) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

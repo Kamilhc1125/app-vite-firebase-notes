@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Landing, Layout, NoteList, NoteAdd, NoteDetails, NotFound } from "@/components";
+import { About, Landing, Layout, NoteList, NoteAdd, NoteDetails, NotFound } from "@/components";
 import { useAuthStatus } from "@/hooks";
 
 export const App = () => {
@@ -17,6 +17,7 @@ export const App = () => {
           )}
           <Route path="/note/add" element={<NoteAdd />} />
           <Route path="/note/:id" element={<NoteDetails />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
