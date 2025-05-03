@@ -2,11 +2,14 @@ import NoteAdd from "./Note/NoteAdd";
 import NoteDetails from "./Note/NoteDetails";
 import NoteForm from "./Note/NoteForm";
 import NoteList from "./Note/NoteList";
+
+import Footer from "./UI/Footer";
+import Header from "./UI/Header";
+import Heading from "./UI/Heading";
+
 import About from "./About";
 import Auth from "./Auth";
-import Footer from "./UI/Footer";
 import Google from "./Google";
-import Header from "./UI/Header";
 import Landing from "./Landing";
 import Layout from "./Layout";
 import Model from "./Model";
@@ -24,6 +27,7 @@ export {
   Footer,
   Google,
   Header,
+  Heading,
   Landing,
   Layout,
   Model,

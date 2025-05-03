@@ -9,28 +9,9 @@ const useForm = (initialValues = {}) => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const resetForm = () => setForm(initialValues);
+  const resetForm = (newValues = initialValues) => setForm(newValues);
 
   return { form, handleChange, resetForm };
 };
 
 export default useForm;
-
-// import { useState } from "react";
-
-// const useForm = (initialState) => {
-//   const [form, setForm] = useState(initialState);
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setForm((prev) => ({ ...prev, [name]: value }));
-//   };
-
-//   const resetForm = (newState = initialState) => {
-//     setForm(newState);
-//   };
-
-//   return { form, handleChange, resetForm };
-// };
-
-// export default useForm;

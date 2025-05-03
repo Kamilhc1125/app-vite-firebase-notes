@@ -17,7 +17,7 @@ export const getNoteById = async (id) => {
   } else {
     throw new Error("Note not found");
   }
-}
+};
 
 export const addNote = async ({ title, content, userId }) => {
   const notesRef = collection(db, "notes");
@@ -26,12 +26,12 @@ export const addNote = async ({ title, content, userId }) => {
     content,
     userId
   });
-}
+};
 
 export const deleteNote = async (id) => {
   const noteDoc = doc(db, "notes", id);
   await deleteDoc(noteDoc);
-}
+};
 
 export const updateNote = async (note) => {
   const noteDoc = doc(db, "notes", note.id)
@@ -39,7 +39,7 @@ export const updateNote = async (note) => {
     title: note.title,
     content: note.content
   });
-}
+};
 
 
 

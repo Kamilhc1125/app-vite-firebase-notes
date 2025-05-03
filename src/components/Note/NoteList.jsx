@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuthStatus } from "@/hooks";
 import useUserStore from "@/store/useUserStore";
 import { getNotesByUserId } from '@/services/notes';
-import { Table } from '@/components';
+import { Table, Heading } from '@/components';
 
 const NoteList = () => {
 
@@ -24,7 +24,7 @@ const NoteList = () => {
 
   return (
     <div>
-      <h1 className='text-2xl font-bold'>Note List</h1>
+      <Heading text="Note List" />
       {isLoggedIn && (
         <Table array={notes} /> 
       )}

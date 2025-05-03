@@ -1,11 +1,25 @@
-import React from 'react';
+import { Heading } from '@/components';
+import { packages } from '@/constants';
 
 const About = () => {
   return (
     <div>
-      <h1 className='text-2xl font-bold'>About</h1>
-      <ul>
-        <li>asdsad</li>
+      <Heading text="About Project" />
+      <ul className="list bg-base-100 rounded-box">
+        {packages.map((item, index) => (
+          <li className="list-row">
+            <div>
+              <div className="text-xs uppercase font-semibold opacity-60">{item}</div>
+            </div>
+          </li>
+        ))}
+
+  
+
+        
+
+  
+
       </ul>
     </div>
   )

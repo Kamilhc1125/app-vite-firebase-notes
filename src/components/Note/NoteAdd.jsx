@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import useUserStore from "@/store/useUserStore";
 import { useAuthStatus, useForm} from '@/hooks';
 import { addNote } from '@/services/notes';
-import { NoteForm, Warning} from '@/components';
+import { NoteForm, Warning, Heading } from '@/components';
 
 const NoteAdd = () => {
 
@@ -35,7 +35,7 @@ const NoteAdd = () => {
 
   return (
     <div>
-      <h1 className='text-2xl font-bold'>Add note</h1>
+      <Heading text="Add Note" />
       {isLoggedIn && <NoteForm handleChange={handleChange} handleSubmit={handleSubmit} note={note} type="add" />}
       {error && <Warning message="Please fill all the fileds"/>}
     </div>

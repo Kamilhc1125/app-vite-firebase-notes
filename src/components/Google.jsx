@@ -13,7 +13,7 @@ const Google = () => {
         fov: 50,
     }}
     >
-      <ambientLight intensity={0.8} />
+      <ambientLight intensity={1.5} />
 
       <directionalLight
         position={[5, 5, 5]}

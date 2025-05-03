@@ -8,3 +8,14 @@ export const links = [
     name: "add note",
   },
 ];
+
+export const packages  = [
+  "react",
+  "vite",
+  "react router",
+  "tailwind css",
+  "daisy ui",
+  "three js",
+  "zustand"
+
+]

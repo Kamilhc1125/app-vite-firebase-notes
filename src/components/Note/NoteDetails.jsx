@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getNoteById, updateNote, deleteNote } from "@/services/notes";
 import { useForm } from '@/hooks';
-import { NoteForm, Warning } from "@/components";
+import { NoteForm, Warning, Heading } from "@/components";
 
 const NoteDetails = () => {
 
@@ -22,7 +22,10 @@ const NoteDetails = () => {
       try {
         const data = await getNoteById(id);
         setNoteData(data);
-        // resetForm(data);
+        resetForm({
+          title: data.title,
+          content: data.content
+        });
         
       } catch (err) {
         console.error(err);
@@ -36,7 +39,7 @@ const NoteDetails = () => {
   const handleSubmit = async () => {
 
     if (!note.title.trim() || !note.content.trim()) {
-      setError("Please fill all fields")
+      setError("Please fill all fields");
       return;
     }
 
@@ -51,7 +54,7 @@ const NoteDetails = () => {
 
   return (
     <div>
-      <h1>Edit Note</h1>
+      <Heading text="Edit Note" />
       {noteData && (
         <NoteForm 
           handleChange={handleChange} 
