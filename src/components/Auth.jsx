@@ -21,10 +21,10 @@ const Auth = () => {
   }, [setUser]);
 
   return (
-    <div className="flex flex-row items-center justify-center  gap-4">
+    <div className="flex flex-row items-center justify-center gap-4">
       {user ? (
         <>
-          <h1 className="text-md text-primary-content font-bold ">Welcome, {user.displayName}</h1>
+          <h1 className="hidden md:inline text-md text-primary-content font-bold ">Welcome, {user.displayName}</h1>
           <img src={user.photoURL} alt="profile" className="rounded-full w-10 h-10" />
           <button className="btn btn-warning hover:cursor-pointer" onClick={logout}>
             Logout

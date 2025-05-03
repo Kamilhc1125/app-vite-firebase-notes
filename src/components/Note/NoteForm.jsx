@@ -1,7 +1,7 @@
 const NoteForm = ({ handleChange, handleSubmit, handleDelete, note, type }) => {
 
   return (
-    <div className="w-[500px]">
+    <div className="w-[300px]">
       <fieldset className="fieldset">
         <input
           name="title"
