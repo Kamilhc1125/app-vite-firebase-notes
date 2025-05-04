@@ -14,6 +14,7 @@ import Landing from "./Landing";
 import Layout from "./Layout";
 import Model from "./Model";
 import NotFound from "./NotFound";
+import ProtectedRoute from "./ProtectedRoute";
 import Table from "./Table";
 import Warning from "./UI/Warning";
 
@@ -32,6 +33,7 @@ export {
   Layout,
   Model,
   NotFound,
+  ProtectedRoute,
   Table,
   Warning
 }

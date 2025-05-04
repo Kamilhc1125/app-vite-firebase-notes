@@ -23,7 +23,7 @@ const Header = () => {
             <li><Link to="/about" className="uppercase font-bold">About</Link></li>
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost text-xl text-primary-content hover:btn-primary">Firebase Notes</Link>
+        <Link to='/' className="btn btn-ghost text-sm sm:text-2xl text-primary-content hover:btn-primary">Firebase Notes</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-primary-content">

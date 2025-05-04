@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About, Landing, Layout, NoteList, NoteAdd, NoteDetails, NotFound } from "@/components";
+import { About, Landing, Layout, NoteList, NoteAdd, NoteDetails, NotFound,  ProtectedRoute } from "@/components";
 import { useAuthStatus } from "@/hooks";
 
 export const App = () => {
@@ -10,13 +10,23 @@ export const App = () => {
     <Router>
       <Routes>
         <Route element={<Layout />}>
-          {!isLoggedIn ? (
-            <Route path="/" element={<Landing />} />
-          ) : (
-              <Route path="/" element={<NoteList />} />
-          )}
-          <Route path="/note/add" element={<NoteAdd />} />
-          <Route path="/note/:id" element={<NoteDetails />} />
+          <Route path="/" element={isLoggedIn ? <NoteList /> : <Landing />} />
+          <Route
+            path="/note/add"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn}>
+                <NoteAdd />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/note/:id"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn}>
+                <NoteDetails />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>

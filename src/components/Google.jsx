@@ -1,8 +1,6 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { Model } from "@/components"
-
 
 const Google = () => {
   
@@ -20,7 +18,6 @@ const Google = () => {
         intensity={1}
         castShadow
       />
-      <OrbitControls />
       <Suspense fallback={null}>
         <Model />
       </Suspense>
