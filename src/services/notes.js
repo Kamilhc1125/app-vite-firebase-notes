@@ -1,9 +1,24 @@
 import { db } from "./db";
-import { collection, getDocs, addDoc, deleteDoc, doc, updateDoc, query, where, getDoc } from "firebase/firestore";
+import { 
+  collection, 
+  getDocs, 
+  addDoc, 
+  deleteDoc, 
+  doc, 
+  updateDoc, 
+  query, 
+  where, 
+  orderBy, 
+  getDoc, 
+  serverTimestamp 
+} from "firebase/firestore";
 
 export const getNotesByUserId = async (userId) => {
   const notesRef = collection(db, "notes");
-  const q = query(notesRef, where("userId", "==", userId));
+  const q = query(
+    notesRef,
+    where("userId", "==", userId)
+  );
   const data = await getDocs(q);
   return data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 };
@@ -24,7 +39,8 @@ export const addNote = async ({ title, content, userId }) => {
   await addDoc(notesRef, {
     title,
     content,
-    userId
+    userId,
+    createdAt: serverTimestamp()
   });
 };
 
@@ -37,17 +53,7 @@ export const updateNote = async (note) => {
   const noteDoc = doc(db, "notes", note.id)
   await updateDoc(noteDoc, {
     title: note.title,
-    content: note.content
+    content: note.content,
+    updatedAt: serverTimestamp(), 
   });
 };
-
-
-
-
-
-
-
-// export const getNotes = () => getDocs(notesRef);
-// export const addNote = (data) => addDoc(notesRef, data);
-// export const deleteNote = (id) => deleteDoc(doc(db, "notes", id));
-// export const updateNote = (id, data) => updateDoc(doc(db, "notes", id), data);

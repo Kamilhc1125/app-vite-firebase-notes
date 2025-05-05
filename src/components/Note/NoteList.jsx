@@ -25,9 +25,7 @@ const NoteList = () => {
   return (
     <div>
       <Heading text="Note List" />
-      {isLoggedIn && (
-        <Table array={notes} /> 
-      )}
+      {isLoggedIn && <Table array={notes} />}
     </div>
   )
 }
