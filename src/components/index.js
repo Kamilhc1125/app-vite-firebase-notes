@@ -6,6 +6,7 @@ import NoteList from "./Note/NoteList";
 import Footer from "./UI/Footer";
 import Header from "./UI/Header";
 import Heading from "./UI/Heading";
+import Loader from "./UI/Loader";
 
 import About from "./About";
 import Auth from "./Auth";
@@ -29,6 +30,7 @@ export {
   Google,
   Header,
   Heading,
+  Loader,
   Landing,
   Layout,
   Model,

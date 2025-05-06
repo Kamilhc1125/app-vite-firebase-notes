@@ -3,16 +3,18 @@ import { packages } from '@/constants';
 
 const About = () => {
   return (
-    <div>
+    <div className='w-1/2'>
       <Heading text="About Project" />
-      <ul className="list bg-base-100 rounded-box">
-        {packages.map((item, index) => (
-          <li className="list-row" key={index}>
-            <div>
-              <div className="text-xs uppercase font-semibold opacity-60">{item}</div>
-            </div>
-          </li>
-        ))}
+      <ul className="list rounded-box">
+        {packages.map((item, index) => {
+          return (
+            <li className="list-row" key={index}>
+              <div className="text-xs opacity-60">
+                <span className="text-md uppercase font-semibold">{item.name}</span> - {item.description}
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

@@ -10,6 +10,12 @@ const Table = ({ array }) => {
   const remainingKeys = headers.filter((key) => !desiredOrder.includes(key));
   const orderedHeaders = [...desiredOrder, ...remainingKeys];
 
+  const sortedArray = [...array].sort((a, b) => {
+    const dateA = a.createdAt?.toDate?.() ?? new Date(0);
+    const dateB = b.createdAt?.toDate?.() ?? new Date(0);
+    return dateB - dateA;
+  });
+
   const navigate = useNavigate();
 
   return (
@@ -24,7 +30,7 @@ const Table = ({ array }) => {
           </tr>
         </thead>
         <tbody>
-          {array.map((item, index) => {
+          {sortedArray.map((item, index) => {
 
             return (
               <tr

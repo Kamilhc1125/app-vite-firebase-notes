@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About, Landing, Layout, NoteList, NoteAdd, NoteDetails, NotFound,  ProtectedRoute } from "@/components";
+import { About, Landing, Loader, Layout, NoteList, NoteAdd, NoteDetails, NotFound,  ProtectedRoute } from "@/components";
 import { useAuthStatus } from "@/hooks";
 
 export const App = () => {
